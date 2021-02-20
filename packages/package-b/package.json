@@ -1,0 +1,27 @@
+{
+  "name": "@monorepo/b",
+  "version": "1.0.0",
+  "description": "Test package B, uses A",
+  "author": "Dominic Griesel <d.griesel@gmx.net>",
+  "homepage": "https://github.com/AlCalzone/esbuild-repro-852#readme",
+  "license": "MIT",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlCalzone/esbuild-repro-852.git"
+  },
+  "scripts": {
+    "build": "tsc -b tsconfig.json",
+    "clean": "tsc -b tsconfig.json --clean"
+  },
+  "bugs": {
+    "url": "https://github.com/AlCalzone/esbuild-repro-852/issues"
+  },
+  "dependencies": {
+    "@monorepo/a": "^1.0.0"
+  }
+}

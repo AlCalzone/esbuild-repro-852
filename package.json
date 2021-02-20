@@ -1,0 +1,22 @@
+{
+  "name": "esbuild-repro-852",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "repository": "git@github.com:AlCalzone/esbuild-repro-852.git",
+  "author": "Dominic Griesel <d.griesel@gmx.net>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "esbuild": "^0.8.49",
+    "esbuild-runner": "^1.3.2",
+    "lerna": "^3.22.1",
+    "typescript": "^4.1.5"
+  },
+  "scripts": {
+    "test": "lerna run clean && esr packages/package-b/src/index.ts",
+    "test2": "lerna run build && esr packages/package-b/src/index.ts"
+  }
+}

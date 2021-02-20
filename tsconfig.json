@@ -1,0 +1,43 @@
+{
+	"compilerOptions": {
+		// Monorepo setup
+		"composite": true,
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+		"inlineSourceMap": false,
+
+		"paths": {
+			"@monorepo/a": ["./packages/package-a/src"],
+			"@monorepo/a/*": ["./packages/package-a/src/*"],
+			"@monorepo/b": ["./packages/package-b/src"],
+			"@monorepo/b/*": ["./packages/package-b/src/*"],
+		},
+
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"module": "commonjs",
+		"moduleResolution": "node",
+
+		"noEmitOnError": true,
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"stripInternal": true,
+		"target": "es2018",
+		"skipLibCheck": true,
+		"strictNullChecks": true,
+		"strictPropertyInitialization": true,
+		"strictBindCallApply": true,
+		"strictFunctionTypes": true,
+	},
+	"include": [
+		"packages/**/src/**/*.ts",
+		"packages/**/maintenance/**/*.ts",
+		"maintenance/**/*.ts",
+	],
+	"exclude": [
+		"**/build/**",
+		"node_modules/**",
+		"packages/**/node_modules"
+	]
+}

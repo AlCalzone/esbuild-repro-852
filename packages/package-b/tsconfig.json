@@ -1,0 +1,21 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"rootDir": "src",
+		"outDir": "build",
+	},
+	"references": [
+		{
+			"path": "../package-a/tsconfig.json"
+		},
+	],
+	"include": [
+		"gulpfile.ts",
+		"maintenance/**/*.ts",
+		"src/**/*.ts"
+	],
+	"exclude": [
+		"build/**",
+		"node_modules/**"
+	]
+}
